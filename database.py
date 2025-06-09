@@ -4,8 +4,12 @@ from sqlalchemy import create_engine, MetaData
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
+from starlette.config import config
+
+config = Config('.env')
+
 # SQLite 데이터베이스 URL 설정
-SQLALCHEMY_DB_URL = "sqlite:///./myapi.db"
+SQLALCHEMY_DB_URL = config('SQLALCHEMY_DATABASE_URL')
 
 # SQLAlchemy 엔진 생성
 engine = create_engine(
