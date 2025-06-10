@@ -9,7 +9,7 @@ from starlette.config import Config
 config = Config('.env')
 
 # SQLite 데이터베이스 URL 설정
-SQLALCHEMY_DB_URL = Config('SQLALCHEMY_DATABASE_URL')
+SQLALCHEMY_DB_URL = config('SQLALCHEMY_DATABASE_URL')
 
 # SQLAlchemy 엔진 생성
 engine = create_engine(
