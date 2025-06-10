@@ -1,7 +1,42 @@
-myapi.db
-*.pyc
-__pycache__
-migrations
-alembic.ini
-*.pem
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
 .env
+.venv
+env/
+venv/
+ENV/
+
+# Database
+myapi.db
+migrations/
+alembic.ini
+
+# Node.js / Frontend
+node_modules/
+frontend/dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE / Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Security
+*.pem
+*.key
