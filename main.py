@@ -7,8 +7,14 @@ from domain.answer import answer_router
 from domain.question import question_router
 from domain.user import user_router
 app = FastAPI()
+origins = [
+        "http://localhost:5173",
+        "http://localhost:8000",
+        "http://localhost:8000/",
+        "http://127.0.0.1:8000",
+        "http://127.0.0.1:8000/",
+]
 
-origins = ["http://localhost:5173",]
 
 app.add_middleware(
     CORSMiddleware,
