@@ -6,7 +6,7 @@ from sqlalchemy.orm import sessionmaker
 
 from starlette.config import Config
 
-config = config('.env')
+config = Config('.env')
 
 # SQLite 데이터베이스 URL 설정
 SQLALCHEMY_DB_URL = config('SQLALCHEMY_DATABASE_URL')

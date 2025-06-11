@@ -1,6 +1,6 @@
 <script>
     import fastapi from "../lib/api"
-    import Error from "../Components/Error.svelte"
+    import Error from "../components/Error.svelte"
     import { link, push } from 'svelte-spa-router'
     import { access_token, is_login, username } from "../lib/store"
     import moment from 'moment/min/moment-with-locales'

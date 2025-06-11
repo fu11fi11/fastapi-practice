@@ -1,7 +1,7 @@
 <script>
     import { push } from 'svelte-spa-router'
     import fastapi from "../lib/api"
-    import Error from "../Components/Error.svelte"
+    import Error from "../components/Error.svelte"
 
     export let params = {}
     const answer_id = params.answer_id
