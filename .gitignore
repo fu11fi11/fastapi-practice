@@ -40,3 +40,6 @@ Thumbs.db
 # Security
 *.pem
 *.key
+
+logs/
+*.save

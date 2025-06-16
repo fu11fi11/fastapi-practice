@@ -2,10 +2,16 @@ from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import FileResponse
 from starlette.staticfiles import StaticFiles
+import logging
 
 from domain.answer import answer_router
 from domain.question import question_router
 from domain.user import user_router
+
+# 로깅 설정
+logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
+
 app = FastAPI()
 origins = [
         "http://localhost:5173",
@@ -35,4 +41,9 @@ app.mount("/assets", StaticFiles(directory="frontend/dist/assets"))
 
 @app.get("/")
 def index():
-    return FileResponse("frontend/dist/index.html")
+    logger.debug("Root path requested")
+    try:
+        return FileResponse("frontend/dist/index.html")
+    except Exception as e:
+        logger.error(f"Error serving index.html: {str(e)}")
+        raise
