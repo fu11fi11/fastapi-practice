@@ -1,6 +1,6 @@
-# FastAPI Practice Project
+# FastAPI Practice Project([점프 투 FastAPI](https://wikidocs.net/book/8531))
 
-이 프로젝트는 FastAPI를 사용한 백엔드와 Svelte를 사용한 프론트엔드로 구성된 풀스택 웹 애플리케이션입니다.
+이 프로젝트는 FastAPI를 사용한 백엔드와 Svelte를 사용한 프론트엔드로 구성된 풀스택 웹 애플리케이션입니다.  
 
 ## 프로젝트 구조
 
